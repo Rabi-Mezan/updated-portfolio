@@ -19,6 +19,7 @@
 $color-primary:#000000;
 $color-secondary:#FFFFFF;
 $color-ternary:#83A1E9;
+$color-text:#020000;
 
 
 
@@ -81,7 +82,7 @@ $color-ternary:#83A1E9;
   }
   
   .nav li a {
-    color: white;
+    color: $color-text;
     font-size: 20px;
     text-decoration: none;
   }
@@ -137,10 +138,9 @@ $color-ternary:#83A1E9;
   .banner-text{
      position: relative;
      color: $color-secondary;
-     line-height: 30px;
-     
-      top: 40%;
-      left:10%
+     line-height: 35px;
+     top: 40%;
+     left:10%
   }
 
   .banner-text h1{
@@ -178,3 +178,87 @@ $color-ternary:#83A1E9;
       width: 60px;
   }
 
+
+//   about me satrt
+ .about-me{
+
+    position: relative;
+    top: 10%;
+   height: 100vh;
+   background-image: url(/assests/hero_illustration.png);
+   background-position: right;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 40%;
+   color: $color-text;
+ }
+
+ .about-me div{
+     position: relative;
+     top: 30%;
+     left:10%;
+     width:70%;
+ }
+
+#line-img{
+    width: 250px;
+}
+ .about-me h1{
+     font-size: 1.7em;
+     letter-spacing: 6px;
+      
+ }
+
+ .about-me h3{
+
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;  
+ }
+
+ .about-me p{
+    letter-spacing: 1.5px;
+    margin-top: 10px 0px;  
+ }
+
+
+//  animated button
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: $color-secondary;
+    z-index: 1;
+    background: $color-ternary;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }

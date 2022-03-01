@@ -66,7 +66,7 @@
 }
 
 .nav li a {
-  color: white;
+  color: #020000;
   font-size: 20px;
   text-decoration: none;
 }
@@ -125,7 +125,7 @@
 .banner-text {
   position: relative;
   color: #FFFFFF;
-  line-height: 30px;
+  line-height: 35px;
   top: 40%;
   left: 10%;
 }
@@ -170,5 +170,86 @@
 
 .downarrow a img {
   width: 60px;
+}
+
+.about-me {
+  position: relative;
+  top: 10%;
+  height: 100vh;
+  background-image: url(/assests/hero_illustration.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 40%;
+  color: #020000;
+}
+
+.about-me div {
+  position: relative;
+  top: 30%;
+  left: 10%;
+  width: 70%;
+}
+
+#line-img {
+  width: 250px;
+}
+
+.about-me h1 {
+  font-size: 1.7em;
+  letter-spacing: 6px;
+}
+
+.about-me h3 {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  letter-spacing: 1.5px;
+  margin-top: 10px 0px;
+}
+
+button {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #FFFFFF;
+  z-index: 1;
+  background: #83A1E9;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+button:hover {
+  color: #e8e8e8;
+}
+
+button:hover::before {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
