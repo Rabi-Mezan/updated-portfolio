@@ -296,6 +296,10 @@ button:hover::before {
   margin-bottom: 50px;
 }
 
+.project-images-container {
+  overflow: hidden;
+}
+
 .project-images-container img {
   display: -webkit-box;
   display: -ms-flexbox;
