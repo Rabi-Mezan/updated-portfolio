@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="SCSS/main.css">
+    <link rel="stylesheet" href="scss/main.css">
 
     <!-- tailwind -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/ab830fcd39.js" crossorigin="anonymous"></script>
@@ -20,7 +23,7 @@
 <body>
 
     <!-- banner start -->
-    <section class="banner">
+    <section id="home" class="banner">
 
         <!-- navbar start -->
         <div id="menu">
@@ -31,10 +34,10 @@
             </div>
             <nav class="nav" id="nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#blogs">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,8 +61,11 @@
 
 
     <!-- about me section start -->
-    <section class="about-me">
-        <div>
+    <section id="about" class="about-me">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
+            data-aos-anchor-placement="top-center">
+
+
             <h1>ABOUT ME</h1>
             <img id="line-img" src="/assests/Line.png" alt="">
             <h3>Hey, I'm Rabiul Islam
@@ -79,21 +85,21 @@
 
 
     <!-- my works sections start -->
-    <section class="works ">
-        <div class="mr-0">
+    <section id="works" class="works ">
+        <div class="my-works-heading">
             <h1>MY WORKS</h1>
             <img id="line-img" src="/assests/Line.png" alt="">
         </div>
         <div class="works-conatiner ">
 
             <!-- project-1 -->
-            <div class="single-work ">
-                <div class="project-images-container">
+            <div data-aos="fade-up" data-aos-duration="3000" class="project-images-container" class="single-work ">
+                <div>
                     <img src="/assests/Screenshot (128).png" alt="">
                     <!-- <img src="/assests/Screenshot (131).png" alt=""> -->
                 </div>
                 <div class="project-info w-full">
-                    <h2> <i class="fa-solid fa-star-of-life"></i> WaterLoo</h2>
+                    <h2> <i class="fa-solid fa-1"></i> WaterLoo</h2>
                     <p>
                         A Simple Online Ticket Booking Website
                         For Theme Park Named WaterLoo.
@@ -110,19 +116,19 @@
             </div>
 
             <!-- project-2 -->
-            <div class="single-work ">
-                <div class="project-images-container">
+            <div data-aos="fade-up" data-aos-duration="3000" class="project-images-container" class="single-work ">
+                <div>
                     <img src="/assests/Screenshot (132).png" alt="">
                     <!-- <img src="/assests/Screenshot (131).png" alt=""> -->
                 </div>
                 <div class="project-info w-full">
-                    <h2> <i class="fa-solid fa-star-of-life"></i> Hommie</h2>
+                    <h2> <i class="fa-solid fa-2"></i> Hommie</h2>
                     <p>
                         A Simple Website For A Property And Home
                         Selling Company Named Hommie
                         <br> <br>
                         Technology-
-                        ReactJS, Tailwind ,NodeJS, ExpressJS,
+                        ReactJS, Bootstrap ,NodeJS, ExpressJS,
                         MongoDB, Firebase, Heroku.
                     </p>
                     <div class="icons">
@@ -133,6 +139,21 @@
             </div>
         </div>
     </section>
+
+    <section class="blogs">
+        <div class="my-works-heading">
+            <h1>MY BLOGS</h1>
+            <img id="line-img" src="/assests/Line.png" alt="">
+        </div>
+
+    </section>
+
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- js file -->
     <script src="script.js"></script>

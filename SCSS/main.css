@@ -10,6 +10,10 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #menu {
   z-index: 2;
 }
@@ -134,9 +138,10 @@
 }
 
 .banner-text h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   letter-spacing: 6px;
   line-height: 50px;
+  text-shadow: 1px 2px 3px #83A1E9;
 }
 
 .banner-text p {
@@ -204,7 +209,8 @@
   position: relative;
   top: 30%;
   left: 10%;
-  width: 70%;
+  width: 60%;
+  text-align: justify;
 }
 
 #line-img {
@@ -215,6 +221,7 @@
   font-family: url("/assests/Sophistica 1.ttf");
   font-size: 2em;
   letter-spacing: 6px;
+  text-shadow: 1px 1px 3px #83A1E9;
 }
 
 .about-me h3 {
@@ -273,27 +280,32 @@ button:hover::before {
 
 .works {
   position: relative;
-  height: 80vh;
-  top: 40%;
+  min-height: 80vh;
+  top: 50%;
   left: 10%;
   width: 80%;
   margin-top: 50px;
 }
 
+.works .my-works-heading {
+  position: relative;
+  right: 0;
+}
+
 .works h1 {
   font-size: 2em;
   letter-spacing: 6px;
+  text-shadow: 1px 1px 3px #83A1E9;
 }
 
 .works > .works-conatiner {
-  margin-top: 50px;
+  margin: 50px 0px;
 }
 
 .works-conatiner > .single-work {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
 }
 
 .project-images-container {
@@ -307,14 +319,17 @@ button:hover::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 70%;
+  width: 50%;
   border: 1px solid black;
   padding: 5px;
 }
 
 .project-info {
   width: 100%;
+  line-height: 10px;
   text-align: right;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .project-info h2 {
@@ -324,10 +339,12 @@ button:hover::before {
 
 .project-info h2 i {
   color: #83A1E9;
+  font-size: 1.3em;
 }
 
 .project-info p {
-  margin: 10px 0px;
+  font-size: 1em;
+  margin: 20px 0px;
   letter-spacing: 3px;
 }
 
@@ -343,18 +360,38 @@ button:hover::before {
           transform: scale(1.2);
 }
 
+.blogs {
+  position: relative;
+  height: 80vh;
+  top: 70%;
+  left: 10%;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.blogs h1 {
+  font-size: 2em;
+  letter-spacing: 6px;
+  text-shadow: 1px 1px 3px #83A1E9;
+}
+
 @media screen and (max-width: 600px) {
   .about-me div {
     width: 90%;
   }
+  .banner, .about-me, .works {
+    left: 5;
+  }
   .project-info {
     text-align: left;
+    line-height: normal;
   }
   .works-conatiner > .single-work {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 50px;
   }
   .project-images-container img {
     width: 100%;
