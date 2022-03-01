@@ -6,6 +6,10 @@
 // <i class="fa-brands fa-instagram"></i>
 
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
     margin: 0;
     padding: 0;
@@ -140,12 +144,14 @@ $color-text:#020000;
      color: $color-secondary;
      line-height: 35px;
      top: 40%;
-     left:10%
+     left:10%;
+    
   }
 
   .banner-text h1{
       font-size: 3.5em;
-      letter-spacing: 6px;  
+      letter-spacing: 6px;
+      line-height: 50px;  
   }
 
   .banner-text p{
@@ -159,8 +165,12 @@ $color-text:#020000;
     letter-spacing: 5px;
     transition: all 0.5s ease-in-out;
   }
+.icons a{
+    text-decoration: none;
+    color: $color-secondary;
+}
 
-  .icons i:hover{
+  .icons a i:hover{
       color: $color-ternary;
       transform: scale(1.2);
   }
@@ -168,10 +178,15 @@ $color-text:#020000;
   .downarrow {
      display: flex;
      position: relative;
-     top: 67%;
+     top: 60%;
+     transition: all .3s ease-in;
      justify-content: center;
      align-items: baseline;
      
+  }
+
+  .downarrow:hover{
+      transform: scale(1.1);
   }
 
   .downarrow a img{
@@ -204,7 +219,8 @@ $color-text:#020000;
     width: 250px;
 }
  .about-me h1{
-     font-size: 1.7em;
+     font-family: url('/assests/Sophistica\ 1.ttf');
+     font-size: 2em;
      letter-spacing: 6px;
       
  }
@@ -214,20 +230,22 @@ $color-text:#020000;
     font-size: 1em;
     font-weight: 600;
     letter-spacing: 2px;
-    margin-bottom: 20px;  
+    margin-bottom: 20px; 
+    line-height: 20px; 
  }
 
  .about-me p{
     letter-spacing: 1.5px;
     margin-top: 10px 0px;  
+    line-height: 20px;
  }
 
 
 //  animated button
 button {
-    padding: 15px 25px;
+    padding: 12px 25px;
     border: unset;
-    border-radius: 15px;
+    border-radius: 0px;
     color: $color-secondary;
     z-index: 1;
     background: $color-ternary;
@@ -247,7 +265,7 @@ button {
     left: 0;
     height: 100%;
     width: 0;
-    border-radius: 15px;
+    
     background-color: #212121;
     z-index: -1;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
@@ -262,3 +280,95 @@ button {
    button:hover::before {
     width: 100%;
    }
+
+
+//    my works start
+.works{
+    position: relative;
+    height: 80vh;
+    top: 40%;
+    left:10%;
+    width:80%;
+    margin-top: 50px;
+}
+
+
+
+
+.works h1{
+    font-size: 2em;
+    letter-spacing: 6px;
+}
+
+.works>.works-conatiner{
+    margin-top: 50px;
+}
+
+.works-conatiner>.single-work{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.project-images-container img{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.project-info{
+    width: 100%;
+    text-align: right;
+    // margin-left: -100px;
+}
+.project-info h2{
+    font-size: 1.6em;
+    letter-spacing: 6px;
+}
+
+.project-info h2 i{
+    color: #83A1E9;
+}
+
+.project-info p{
+    margin: 10px 0px;
+    letter-spacing: 3px;
+    
+}
+
+.project-info .icons i{
+margin: 5px;
+transition: all 0.3s ease-in-out;
+}
+
+.project-info .icons i:hover{
+    color: $color-ternary;
+    transform: scale(1.2);
+}
+
+
+
+// medis query
+@media screen and (max-width: 600px){
+
+    .about-me div{
+        width: 90%;
+    }
+
+
+    .project-info{
+        text-align: left;
+    }
+
+    .works-conatiner>.single-work{
+        flex-direction: column;
+        
+    }
+
+    .project-images-container img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

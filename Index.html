@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SCSS/main.css">
 
+    <!-- tailwind -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/ab830fcd39.js" crossorigin="anonymous"></script>
 
@@ -39,21 +42,17 @@
         <!-- navbar end -->
 
         <!-- banner info start -->
-
         <div class="banner-text ">
             <h1>MD RABIUL ISLAM </h1>
             <p id="app">Junior Web Developer & UI Designer</p>
             <div class="icons">
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-instagram"></i>
+                <a href="/"> <i class="fa-brands fa-github"></i></a>
+                <a href="/"> <i class="fa-brands fa-linkedin"></i></a>
+                <a href="/"> <i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-
         <div class="downarrow">
-
             <a href=""><img src="/assests/downarrow.png" alt=""></a>
-
         </div>
     </section>
 
@@ -71,17 +70,69 @@
                 currently working as a frontend web developer. I am eager to be challenged
                 in order to grow and further improve my development skills.</p>
             <br>
-
-            <a href="https://drive.google.com/file/d/18USDGj_zRJjsHOR5-BW33IeblzPRZk_J/view?usp=sharing">
-                <button> GET RESUME</button>
+            <a class="" href="https://drive.google.com/file/d/18USDGj_zRJjsHOR5-BW33IeblzPRZk_J/view?usp=sharing">
+                <button class="px-10 py-3"> GET RESUME</button>
             </a>
         </div>
     </section>
 
 
 
+    <!-- my works sections start -->
+    <section class="works ">
+        <div class="mr-0">
+            <h1>MY WORKS</h1>
+            <img id="line-img" src="/assests/Line.png" alt="">
+        </div>
+        <div class="works-conatiner ">
 
+            <!-- project-1 -->
+            <div class="single-work ">
+                <div class="project-images-container">
+                    <img src="/assests/Screenshot (128).png" alt="">
+                    <!-- <img src="/assests/Screenshot (131).png" alt=""> -->
+                </div>
+                <div class="project-info w-full">
+                    <h2> <i class="fa-solid fa-star-of-life"></i> WaterLoo</h2>
+                    <p>
+                        A Simple Online Ticket Booking Website
+                        For Theme Park Named WaterLoo.
+                        <br> <br>
+                        Technology-
+                        ReactJS, Tailwind ,NodeJS, ExpressJS,
+                        MongoDB, Firebase, Heroku.
+                    </p>
+                    <div class="icons">
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                    </div>
+                </div>
+            </div>
 
+            <!-- project-2 -->
+            <div class="single-work ">
+                <div class="project-images-container">
+                    <img src="/assests/Screenshot (132).png" alt="">
+                    <!-- <img src="/assests/Screenshot (131).png" alt=""> -->
+                </div>
+                <div class="project-info w-full">
+                    <h2> <i class="fa-solid fa-star-of-life"></i> Hommie</h2>
+                    <p>
+                        A Simple Website For A Property And Home
+                        Selling Company Named Hommie
+                        <br> <br>
+                        Technology-
+                        ReactJS, Tailwind ,NodeJS, ExpressJS,
+                        MongoDB, Firebase, Heroku.
+                    </p>
+                    <div class="icons">
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- js file -->
     <script src="script.js"></script>
