@@ -5,17 +5,33 @@
 // <i class="fa-brands fa-linkedin"></i>
 // <i class="fa-brands fa-instagram"></i>
 
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: centaur;
     font-size: 16px;
+    word-wrap: break-word;
+    
+    
+}
+
+#loading{
+    position: fixed;
+    width: 100%;
+    font-size: 1.3em;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #fff url(/assests/swing-thumb.gif);
+    z-index: 1000;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+body{
+    overflow-x: hidden;
 }
 
 html {
@@ -49,12 +65,33 @@ $color-text:#020000;
     src: url(../assests/Centaur-Font/CENTAUR.TTF);
 }
 
+@font-face {
+    font-family: handwritten;
+    src: url(/assests/helloketta.ttf);
+}
+
+@font-face {
+    font-family: handwritten-one;
+    src: url(/assests/Bulgatti.ttf);
+}
+
+@font-face {
+    font-family: smartfont;
+    src: url(/assests/ScienceFair.otf);
+}
+
+@font-face {
+    font-family: smartsmlim;
+    src: url(/assests/Slim-AAv6.ttf);
+}
+
 
 // banner start
 
 .banner{
     position:relative;   
     height: 90vh;
+    width: 100%;
     background-color: $color-primary;
 }
 
@@ -95,11 +132,14 @@ $color-text:#020000;
     color: $color-text;
     font-size: 20px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
   }
   
   .nav li a:hover {
     font-weight: bold;
-    margin-left: 10px;
+   letter-spacing: 3px;
+   transform: scale(1.1);
+    color: $color-secondary;
   }
   
   .menu-bg, #menu {
@@ -160,19 +200,22 @@ $color-text:#020000;
       letter-spacing: 6px;
       line-height: 50px; 
     //   text-shadow: 1px 2px 3px $color-ternary;
-    //   font-family: url(/assests/Sophistica\ 1.ttf); 
-
-
+    //   font-family:  handwritten-one;
+    //   word-spacing: 3px; 
+      font-family: smartfont;
+    // font-family: handwritten;
     
   }
 
 
 
   .banner-text p{
-      font-size: 1.3em;
+      font-size: .5em;
       font-weight: lighter;
       letter-spacing: 5px;
       margin: 20px 0px;
+      font-family: smartsmlim;
+    //   padding-right: 10px;
   }
 
   .banner-text .icons{
@@ -193,6 +236,7 @@ $color-text:#020000;
      display: flex;
      position: relative;
      top: 60%;
+     z-index: 10;
      transition: all .3s ease-in;
      justify-content: center;
      align-items: baseline;
@@ -213,13 +257,14 @@ $color-text:#020000;
 
     position: relative;
     top: 10%;
-   height: 100vh;
-   background-image: url(/assests/undraw_handcrafts_man.png);
-   background-position: right;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: 30%;
-   color: $color-text;
+    height: 100vh;
+    background-image: url(/assests/undraw_handcrafts_man.png);
+    background-position: right;
+    //    color: $color-secondary;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 30%;
+//    background-color: #83A1E9;
  }
 
  .about-me div{
@@ -234,7 +279,6 @@ $color-text:#020000;
     width: 300px;
 }
  .about-me h1{
-     font-family: url('/assests/Sophistica\ 1.ttf');
      font-size: 2em;
      letter-spacing: 6px;
      text-shadow: 1px 1px 3px $color-ternary;
@@ -254,7 +298,23 @@ $color-text:#020000;
     letter-spacing: 1.5px;
     margin-top: 10px 0px;  
     line-height: 20px;
+    padding-right: 15px;
  }
+
+.skill{
+    background-color: $color-primary;
+    width: auto;
+    color: $color-secondary;
+    padding: 3px 8px;
+    // font-family: smartfont;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.skill:hover{
+    font-style: italic;
+}
 
 
 //  animated button
@@ -327,6 +387,25 @@ text-align: right;
     text-shadow: 1px 1px 3px $color-ternary;
     
 }
+
+.works .my-works-heading h3{
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px; 
+    line-height: 20px; 
+    
+ }
+ .my-works-heading h3 span a{
+     color: $color-primary;
+     transition: all .3s ease-in-out;
+ }
+
+ .my-works-heading h3 span a i:hover{
+transform:  scale(1.2);
+color: $color-ternary;
+ }
+
 
 .works>.works-conatiner{
     margin: 50px 0px;
@@ -452,6 +531,12 @@ text-align: right;
     margin-top: 80px;
 }
 
+// #contact-container{
+//     background-color: $color-primary;
+//     color: $color-secondary;
+//     padding: 10px;
+// }
+
 .contact h1{
     font-size: 2em;
     letter-spacing: 6px;
@@ -501,19 +586,24 @@ text-align: right;
     // footer section
 
     .footer-section {
-        position: relative;
+        background-image: url(/assests/footerwave.svg);
         width: 100%;
         min-height: 20vh;
-        background-color: $color-primary;
+        // background-color: $color-primary;
         display: grid;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 50vh;
         place-items: center;
+        background-position: center;
         
     }
 
    .copyright p{
         position: relative;
-        
+        font-family: smartfont;
         margin-bottom: 0;
+        margin-top: 150px;
         letter-spacing: 3px;
         color: $color-secondary;
         font-size: 0.8em;
@@ -523,16 +613,31 @@ text-align: right;
 
 
 
-
-
 // media query
-@media screen and (max-width: 600px){
+@media screen and (max-width: 680px){
 
+    .about-me{
+        background-image: none;
+    }
+
+    .banner-text h1{
+        padding-right: 5px;
+    }
+    .banner-text p{
+        letter-spacing: 1px;
+    }
     .about-me div{
         width: 90%;
     }
+    // .skills-section .skills{
+    //     flex-direction: column;
+    // }
 
-    .banner, .about-me, .works{
+    // .skills div{
+    //     max-width: 100px;
+    // }
+
+    .banner, .about-me, .works, .contact{
         left: 5;
     }
 
@@ -542,11 +647,17 @@ text-align: right;
     .project-info{
         text-align: left;
         line-height: normal;
+        
+    }
+
+    .project-info p{
+        width: 100%;
+        text-align: justify;
     }
 
     .works-conatiner>.single-work{
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
         
     }
 
@@ -565,9 +676,18 @@ text-align: right;
         justify-content: space-between;
     }
 
+     .blogs-info p{
+       margin: 50px 0px;
+    }
+
 
     .blogs-info p{
         margin: 10px 0px;
+    }
+
+
+    #line-img{
+        width: 220px;
     }
 
 }

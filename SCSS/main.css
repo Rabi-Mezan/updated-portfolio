@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +5,25 @@
           box-sizing: border-box;
   font-family: centaur;
   font-size: 16px;
+  word-wrap: break-word;
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  font-size: 1.3em;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #fff url(/assests/swing-thumb.gif);
+  z-index: 1000;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 html {
@@ -30,9 +46,30 @@ html {
   src: url(../assests/Centaur-Font/CENTAUR.TTF);
 }
 
+@font-face {
+  font-family: handwritten;
+  src: url(/assests/helloketta.ttf);
+}
+
+@font-face {
+  font-family: handwritten-one;
+  src: url(/assests/Bulgatti.ttf);
+}
+
+@font-face {
+  font-family: smartfont;
+  src: url(/assests/ScienceFair.otf);
+}
+
+@font-face {
+  font-family: smartsmlim;
+  src: url(/assests/Slim-AAv6.ttf);
+}
+
 .banner {
   position: relative;
   height: 90vh;
+  width: 100%;
   background-color: #000000;
 }
 
@@ -76,11 +113,16 @@ html {
   color: #020000;
   font-size: 20px;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav li a:hover {
   font-weight: bold;
-  margin-left: 10px;
+  letter-spacing: 3px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #FFFFFF;
 }
 
 .menu-bg, #menu {
@@ -141,13 +183,15 @@ html {
   font-size: 3em;
   letter-spacing: 6px;
   line-height: 50px;
+  font-family: smartfont;
 }
 
 .banner-text p {
-  font-size: 1.3em;
+  font-size: .5em;
   font-weight: lighter;
   letter-spacing: 5px;
   margin: 20px 0px;
+  font-family: smartsmlim;
 }
 
 .banner-text .icons {
@@ -173,6 +217,7 @@ html {
   display: flex;
   position: relative;
   top: 60%;
+  z-index: 10;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   -webkit-box-pack: center;
@@ -201,7 +246,6 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 30%;
-  color: #020000;
 }
 
 .about-me div {
@@ -217,7 +261,6 @@ html {
 }
 
 .about-me h1 {
-  font-family: url("/assests/Sophistica 1.ttf");
   font-size: 2em;
   letter-spacing: 6px;
   text-shadow: 1px 1px 3px #83A1E9;
@@ -235,6 +278,20 @@ html {
   letter-spacing: 1.5px;
   margin-top: 10px 0px;
   line-height: 20px;
+  padding-right: 15px;
+}
+
+.skill {
+  background-color: #000000;
+  width: auto;
+  color: #FFFFFF;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.skill:hover {
+  font-style: italic;
 }
 
 button {
@@ -299,6 +356,26 @@ button:hover::before {
   font-size: 2em;
   letter-spacing: 6px;
   text-shadow: 1px 1px 3px #83A1E9;
+}
+
+.works .my-works-heading h3 {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.my-works-heading h3 span a {
+  color: #000000;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.my-works-heading h3 span a i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #83A1E9;
 }
 
 .works > .works-conatiner {
@@ -476,28 +553,42 @@ button:hover::before {
 }
 
 .footer-section {
-  position: relative;
+  background-image: url(/assests/footerwave.svg);
   width: 100%;
   min-height: 20vh;
-  background-color: #000000;
   display: -ms-grid;
   display: grid;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
   place-items: center;
+  background-position: center;
 }
 
 .copyright p {
   position: relative;
+  font-family: smartfont;
   margin-bottom: 0;
+  margin-top: 150px;
   letter-spacing: 3px;
   color: #FFFFFF;
   font-size: 0.8em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
+  .about-me {
+    background-image: none;
+  }
+  .banner-text h1 {
+    padding-right: 5px;
+  }
+  .banner-text p {
+    letter-spacing: 1px;
+  }
   .about-me div {
     width: 90%;
   }
-  .banner, .about-me, .works {
+  .banner, .about-me, .works, .contact {
     left: 5;
   }
   .downarrow {
@@ -507,12 +598,16 @@ button:hover::before {
     text-align: left;
     line-height: normal;
   }
+  .project-info p {
+    width: 100%;
+    text-align: justify;
+  }
   .works-conatiner > .single-work {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
   .project-images-container img {
     width: 100%;
@@ -535,7 +630,13 @@ button:hover::before {
             justify-content: space-between;
   }
   .blogs-info p {
+    margin: 50px 0px;
+  }
+  .blogs-info p {
     margin: 10px 0px;
+  }
+  #line-img {
+    width: 220px;
   }
 }
 /*# sourceMappingURL=main.css.map */

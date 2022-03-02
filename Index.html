@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scss/main.css">
     <link rel="shortcut icon" href="/assests/coding.png" type="image/x-icon">
-    <!-- tailwind -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!-- aos animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -17,10 +15,15 @@
     <script src="https://kit.fontawesome.com/ab830fcd39.js" crossorigin="anonymous"></script>
 
     <title>rabi-dev</title>
-
 </head>
 
-<body>
+<body onload="setTimeout(loadFunction,3000)">
+
+    <!--pre laoder -->
+    <div id="loading">Please Wait
+        <br>
+        I'm Getting Ready.... &#128519;
+    </div>
 
     <!-- banner start -->
     <section id="home" class="banner">
@@ -51,9 +54,11 @@
             <h1>MD RABIUL ISLAM </h1>
             <p id="app">Junior Web Developer & UI Designer</p>
             <div class="icons">
-                <a href="https://github.com/Rabi-Mezan"> <i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rabiul-islam007/"> <i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/rm_photography07/"> <i class="fa-brands fa-instagram"></i></a>
+                <a target=”_blank” href="https://github.com/Rabi-Mezan"> <i class="fa-brands fa-github"></i></a>
+                <a target=”_blank” href="https://www.linkedin.com/in/rabiul-islam007/"> <i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a target=”_blank” href="https://www.instagram.com/rm_photography07/"> <i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
         <div class="downarrow">
@@ -76,8 +81,23 @@
             <p>Recently I have completed my graduation in Computer Science
                 from Daffodil International University. I love web technologies and
                 currently working as a frontend web developer. I am eager to be challenged
-                in order to grow and further improve my development skills.</p>
+                in order to grow and further improve my development skills.I like to play with the following
+                technologies and tools...</p>
             <br>
+            <span class="skill">#CSS</span>
+            <span class="skill">#Tailwind</span>
+            <span class="skill">#Scss</span>
+            <span class="skill">#ReactJs</span>
+            <span class="skill">#NodeJs</span>
+            <br> <br>
+            <span class="skill">#ExpressJS</span>
+            <span class="skill">#MongoDB</span>
+            <span class="skill">#AdobeXD</span>
+
+
+            <br>
+            <br>
+
             <a target=”_blank” class=""
                 href="https://drive.google.com/file/d/18USDGj_zRJjsHOR5-BW33IeblzPRZk_J/view?usp=sharing">
                 <button class="px-10 py-3"> GET RESUME</button>
@@ -92,6 +112,9 @@
         <div class="my-works-heading">
             <h1>MY WORKS</h1>
             <img id="line-img" src="/assests/Line.png" alt="">
+            <h3>To see all of my works visit my Github <span>
+                    <a target=”_blank” href="https://github.com/Rabi-Mezan"> <i class="fa-brands fa-github"></i></a>
+                </span></h3>
         </div>
         <div class="works-conatiner ">
 
@@ -112,8 +135,10 @@
                         MongoDB, Firebase, Heroku.
                     </p>
                     <div class="icons">
-                        <a href="https://github.com/Rabi-Mezan/water-loo"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://waterloo-4c56d.web.app/"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                        <a target=”_blank” href="https://github.com/Rabi-Mezan/water-loo"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a target=”_blank” href="https://waterloo-4c56d.web.app/"><i
+                                class="fa-solid fa-square-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -135,8 +160,10 @@
                         MongoDB, Firebase, Heroku.
                     </p>
                     <div class="icons">
-                        <a href="https://github.com/Rabi-Mezan/hommie-client"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://homee-d9f69.web.app/"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                        <a target=”_blank” href="https://github.com/Rabi-Mezan/hommie-client"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a target=”_blank” href="https://homee-d9f69.web.app/"><i
+                                class="fa-solid fa-square-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -150,12 +177,12 @@
         </div>
 
         <div class="blogs-container">
-            <div class="single-blog">
+            <div data-aos="fade-up" data-aos-duration="3000" class="single-blog">
                 <img src="/assests/Screenshot (135).png" alt="">
                 <div class="blogs-info">
-                    <h2>INTRODUCTION TO JWT TOKEN</h2>
-                    <p>By : <i>Rabiul Islam</i></p>
-                    <a
+                    <h2 style="margin-top: 5px">INTRODUCTION TO JWT TOKEN</h2>
+                    <p style="margin-bottom: 20px">By : <i>Rabiul Islam</i></p>
+                    <a target=”_blank”
                         href="https://www.linkedin.com/pulse/introduction-json-web-token-jwt-rabiul-islam/?trackingId=dlB%2F%2FP38QbKdrLl%2B04zzAw%3D%3D">
 
                         <button>Read More</button>
@@ -174,20 +201,24 @@
             <img id="line-img" src="/assests/Line.png" alt="">
         </div>
 
-        <div class="contact-text">
-            <h2>FEEL FREE TO CONTACT !</h2>
-            <p>Feel free to get in touch with me. I am always open to discussing new projects
-                creative ideas or opportunities to be part of your visions.</p>
-        </div>
+        <div <div data-aos="fade-up" data-aos-duration="3000" id="contact-container">
+            <div class="contact-text">
+                <h2>FEEL FREE TO CONTACT !</h2>
+                <p>Feel free to get in touch with me. I am always open to discussing new projects
+                    creative ideas or opportunities to be part of your visions.</p>
+            </div>
 
-        <div class="btn-icons">
-            <a href="mailto: rabiulislam.dev@gmail.com">
-                <button>Say Hello</button>
-            </a>
-            <div class="contact-icons">
-                <a href="https://github.com/Rabi-Mezan"> <i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rabiul-islam007/"> <i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/rm_photography07/"> <i class="fa-brands fa-instagram"></i></a>
+            <div class="btn-icons">
+                <a href="mailto: rabiulislam.dev@gmail.com">
+                    <button> <i class="fa-solid fa-at"></i> Say Hello</button>
+                </a>
+                <div class="contact-icons">
+                    <a target=”_blank” href="https://github.com/Rabi-Mezan"> <i class="fa-brands fa-github"></i></a>
+                    <a target=”_blank” href="https://www.linkedin.com/in/rabiul-islam007/"> <i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a target=”_blank” href="https://www.instagram.com/rm_photography07/"> <i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
         </div>
         <div>
@@ -201,7 +232,7 @@
     <footer class="footer-section">
         <div>
             <div class="copyright">
-                <p>CopyRight &#169; R.dev/2022</p>
+                <p>CopyRight &#169; rabi-dev/2022</p>
             </div>
             <!-- <img src="/assests/footerwave.svg" alt=""> -->
 
