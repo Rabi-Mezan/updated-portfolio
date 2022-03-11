@@ -28,6 +28,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #menu {
@@ -39,6 +40,7 @@ html {
   height: 40px;
   margin: 30px 0 20px 20px;
   cursor: pointer;
+  z-index: 999;
 }
 
 @font-face {
@@ -76,9 +78,9 @@ html {
 .bar {
   height: 6px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #E0E0E0;
   display: block;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-left: 10px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -128,7 +130,7 @@ html {
 .menu-bg, #menu {
   top: 0;
   left: 10;
-  position: absolute;
+  position: fixed;
 }
 
 .menu-bg {
@@ -180,14 +182,15 @@ html {
 }
 
 .banner-text h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   letter-spacing: 6px;
-  line-height: 50px;
+  line-height: 60px;
+  word-break: normal;
   font-family: smartfont;
 }
 
 .banner-text p {
-  font-size: .5em;
+  font-size: .6em;
   font-weight: lighter;
   letter-spacing: 5px;
   margin: 20px 0px;
@@ -195,7 +198,7 @@ html {
 }
 
 .banner-text .icons {
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -298,6 +301,7 @@ button {
   padding: 12px 25px;
   border: unset;
   border-radius: 0px;
+  margin-top: 15px;
   color: #FFFFFF;
   z-index: 1;
   background: #83A1E9;
@@ -576,6 +580,14 @@ button:hover::before {
 }
 
 @media screen and (max-width: 680px) {
+  .bar {
+    height: 4px;
+    width: 80%;
+    margin-left: 2px;
+  }
+  .menu-bg, #menu {
+    left: 0;
+  }
   .about-me {
     background-image: none;
   }
@@ -588,7 +600,10 @@ button:hover::before {
   .about-me div {
     width: 90%;
   }
-  .banner, .about-me, .works, .contact {
+  .banner {
+    left: 0;
+  }
+  .about-me, .works, .contact {
     left: 5;
   }
   .downarrow {

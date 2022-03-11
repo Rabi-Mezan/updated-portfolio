@@ -1,6 +1,5 @@
 
 var preloader = document.getElementById('loading');
-
 function loadFunction() {
     preloader.style.display = 'none';
 }
@@ -12,3 +11,4 @@ function menuOnClick() {
     document.getElementById("menu-bg").classList.toggle("change-bg");
 }
 
+document.getElementById("year").innerHTML = (new Date().getFullYear());
